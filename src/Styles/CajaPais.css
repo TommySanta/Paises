@@ -1,0 +1,9 @@
+.react-iconcaja {
+    font-size: 200%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
