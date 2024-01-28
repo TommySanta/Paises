@@ -1,0 +1,69 @@
+.navbar-btn {
+    color: var(--text-color);
+    background-color: var(--nav-bg-color);
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+.navbar-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.navbar-section {
+    color: var(--text-color);
+    background-color: var(--nav-bg-color);
+    height: 80px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-title {
+    letter-spacing: .10px;
+    padding-left: 5%;
+}
+
+.navbar-title a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.react-icon {
+    font-size: 300%;
+    animation: rotate 10s linear infinite;
+}
+
+
+/* Animación - React_Logo */
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+/* Responsive */
+@media screen and (max-width: 650px) {
+    .navbar-section {
+        padding: 0 15px;
+    }
+    .navbar-title {
+        font-size: 15px;
+    }
+    .navbar-btn {
+        font-size: 15px;
+    }
+}

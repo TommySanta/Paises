@@ -1,0 +1,118 @@
+/* Página */
+.filter-input {
+    position: relative;
+}
+
+.filter-input input {
+
+    color: var(--text-color);
+    background-color: var(--nav-bg-color);
+    box-shadow: 3px 3px 3px var(--btn-hover), -3px -3px 3px var(--btn-hover), 3px -3px 3px var(--btn-hover), -3px 3px 3px var(--btn-hover);
+    width: 440px;
+    height: 60px;
+    padding: 15px 12px 15px 40px;
+    font-size: 18px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    outline: transparent;
+    letter-spacing: .6px;
+}
+
+.filter-results-container {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    height: 120px;
+    padding: 32px 40px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#searchIcon {
+    color: var(--text-color);
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-size: 20px;
+}
+
+/*Estilo para eldesplegable */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* 
+Estilo para la seleccionada */
+.selected-option {
+    border: 1px solid var(--btn-hover);
+    background-color: var(--nav-bg-color);
+    box-shadow: 3px 3px 3px var(--btn-hover), -3px -3px 3px var(--btn-hover), 3px -3px 3px var(--btn-hover), -3px 3px 3px var(--btn-hover);
+    width: 150px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Estilo para las opciones.*/
+.options {
+
+    border: 1px solid var(--btn-hover);
+    background-color: var(--nav-bg-color);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    z-index: 1;
+}
+
+/* Estilo para cada opción en el menú  */
+.options li {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Click del menu */
+.custom-dropdown:hover .options {
+    display: block;
+}
+
+/* Estilo para la opción seleccionada */
+.custom-dropdown:hover .selected-option {
+    border-radius: 6px 6px 0 0;
+    border-bottom: none;
+}
+
+/* Efecto de desplazamiento */
+.options li:hover {
+    background-color: var(--bg-color);
+}
+
+/* Responsive */
+@media screen and (max-width: 650px) {
+    .filter-results-container {
+        height: auto;
+        padding: 40px 15px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .filter-input,
+    .filter-input input {
+        width: 100%;
+    }
+}

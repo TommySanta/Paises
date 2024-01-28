@@ -1,0 +1,168 @@
+/* Los bordes*/
+.country-border {
+    padding: 40px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px 0;
+    letter-spacing: .5px;
+}
+.country-border p {
+    margin: 8px 10px 8px 0;
+}
+.country-border a {
+    color: var(--text-color);
+    margin: 0 8px 0 0;
+    text-decoration: none;
+}
+.country-border-name {
+    color: var(--text-color);
+    background-color: var(--nav-bg-color);
+    box-shadow: 3px 3px 3px var(--btn-hover), -3px -3px 3px var(--btn-hover), 3px -3px 3px var(--btn-hover), -3px 3px 3px var(--btn-hover);
+    padding: 6px 10px;
+    border: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.country-border-name:hover {
+    background-color: var(--nav-shadow-color);
+}
+.no-countries {
+    color: rgb(235, 181, 5);
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: .8px;
+}
+/* Página */
+.country-details-section {
+    background-color: var(--bg-color);
+    min-height: 90vh;
+    padding: 0 40px;
+    
+}
+.back-btn-container {
+    background-color: var(--bg-color);
+    height: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.back-btn-container button {
+    background-color: var(--nav-bg-color);
+    box-shadow: 3px 3px 3px var(--btn-hover), -3px -3px 3px var(--btn-hover), 3px -3px 3px var(--btn-hover), -3px 3px 3px var(--btn-hover);
+    color: var(--text-color);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    border: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.back-btn-container button:hover {
+    background-color: var(--nav-shadow-color);
+}
+/* Información del País*/
+.countryInfoSection {
+    background-color: var(--bg-color);
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 64px;
+}
+.countryFlag-container {
+    box-shadow: 3px 3px 3px var(--btn-hover), -3px -3px 3px var(--btn-hover), 3px -3px 3px var(--btn-hover), -3px 3px 3px var(--btn-hover);
+    width: 430px;
+    height: 300px;
+    max-width: 430px;
+}
+.countryFlag-container img {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform .3s ease;
+}
+.countryFlag-container img:hover {
+    transform: scale(1.04);
+}
+/* El texto */
+.countryStats-container {
+    width: 65%;
+}
+.country-title {
+    padding: 16px 0;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+.country-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 150px;
+}
+.country-details p {
+    margin: 10px 0;
+    color: var(--text-color);
+    letter-spacing: .5px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1100px) {
+    .country-details-section {
+        height: auto;
+    }
+    .countryInfoSection {
+        padding: 0;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .countryFlag-container {
+        width: 450px;
+        max-width: 450px;
+    }
+    .countryStats-container {
+        width: 100%;
+    }
+    .country-details {
+        gap: 24%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .countryInfoSection {
+        padding-bottom: 32px;
+    }
+    .countryFlag-container {
+        width: 360px;
+        height: 250px;
+        max-width: 360px;
+    }
+    .country-details-section {
+        padding: 0 16px;
+    }
+    .country-details {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .country-border {
+        padding: 24px 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    .countryFlag-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
